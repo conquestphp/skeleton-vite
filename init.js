@@ -85,10 +85,11 @@ for (const key in responses) {
 	replaceInDir(process.cwd(), response.val, response.replaces);
 }
 
-fs.unlinkSync(__filename);
+fs.unlinkSync('./init.js');
 
-const packageJsonPath = path.join(__dirname, 'package.json');
-const packageJson = require(packageJsonPath);
+const packageJsonPath = path.join('./package.json');
+const packageJsonData = fs.readFileSync(packageJsonPath, 'utf-8');
+const packageJson = JSON.parse(packageJsonData);
 delete packageJson.scripts.init;
 fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2));
 

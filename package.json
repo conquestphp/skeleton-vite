@@ -11,7 +11,7 @@
     "minor": "npm version minor --no-git-tag-version",
     "major": "npm version major --no-git-tag-version",
     "release": "npm run build && npm publish",
-    "init": "npx node ./init.js"
+    "init": "npx node ./init.js && npm i"
   },
   "author": ":package_author",
   "repository": {
