@@ -18,7 +18,7 @@ import * from ':package_name';
 
 ## Credits
 
-- [:package_author](https://github.com/:package_username)
+- [:package_author](https://github.com/conquestphp)
 - [All Contributors](../../contributors)
 
 ## License

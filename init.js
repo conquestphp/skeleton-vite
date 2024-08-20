@@ -35,11 +35,6 @@ let responses = {
 		val: null,
 		replaces: 'package_author'
 	},
-	username: {
-		question: 'Please enter the your (Github) username: ',
-		val: null,
-		replaces: 'package_username'
-	}
 }
 
 const replaceInFile = (filePath, value, match) => {

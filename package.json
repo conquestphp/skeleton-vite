@@ -1,12 +1,17 @@
 {
-  "name": ":package_name",
+  "name": "@conquest/:package_name",
   "version": "0.0.1",
   "description": ":package_description",
-  "keywords": [],
+  "keywords": [
+    "conquest",
+    ":package_name"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "npm run format && vite build && vue-tsc --declaration --emitDeclarationOnly",
     "format": "npx @biomejs/biome format --write src/",
+    "test": "vitest",
+    "coverage": "vitest run --coverage",
     "patch": "npm version patch --no-git-tag-version",
     "minor": "npm version minor --no-git-tag-version",
     "major": "npm version major --no-git-tag-version",
@@ -16,9 +21,9 @@
   "author": ":package_author",
   "repository": {
     "type": "git",
-    "url": "https://github.com/:package_username/:package_name.git"
+    "url": "https://github.com/conquestphp/:package_name.git"
   },
-  "homepage": "https://github.com/:package_username/:package_name#readme",
+  "homepage": "https://github.com/conquestphp/:package_name#readme",
   "files": [
     "dist"
   ],
@@ -40,6 +45,7 @@
     "@types/node": "^18.0.0",
     "axios": "^1.2.0",
     "typescript": "^4.5.4",
-    "vite": "^4.0.4"
+    "vite": "^4.0.4",
+    "vitest": "^2.0.5"
   }
 }
